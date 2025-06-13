@@ -1,0 +1,5 @@
+node_modules
+*.json
+.firebaserc
+.firebase
+.DS_Store

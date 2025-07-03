@@ -1,0 +1,82 @@
+.main-nav {
+    position: fixed;
+
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: $width-desktop;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: $color-header-bg;
+    backdrop-filter: blur(10px);
+    padding: 0;
+
+    // @include tablet { max-width: calc(100% - 48px); }
+
+    .logo {
+        width: 122px;
+        height: 120px;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        padding-right: clamp(1.5rem, 1vw, 3rem);
+        padding-top: 18px;
+        @include mobile {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100vh;
+            background-color: #E6BBC8;
+            backdrop-filter: blur(10px);
+            @include flex-center;
+            flex-direction: column;
+            gap: 2rem;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+    }
+
+    a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 400;
+        transition: background-color 0.3s;
+        font-size: 1.5rem;
+        @include mobile { font-size: 1.8rem; }
+        &:hover { background-color: rgba($color-primary, 0.3); }
+    }
+
+    .burger-toggle { display: none; }
+    .burger-icon {
+        display: none;
+        position: relative;
+        z-index: 1001;
+        top: 10px;
+        right: 10px;
+        width: 30px; height: 22px;
+        cursor: pointer;
+        @include mobile { display: block; }
+        span {
+            display: block; position: absolute;
+            height: 3px; width: 100%;
+            background: #fff;
+            border-radius: 3px; left: 0;
+            transition: all 0.3s ease-in-out;
+            &:nth-child(1) { top: 0px; }
+            &:nth-child(2) { top: 9px; }
+            &:nth-child(3) { top: 18px; }
+        }
+    }
+
+    .burger-toggle:checked ~ ul { transform: translateX(0); }
+    .burger-toggle:checked + .burger-icon span {
+        &:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+        &:nth-child(2) { opacity: 0; }
+        &:nth-child(3) { transform: rotate(-45deg) translate(6px, -7px); }
+    }
+}

@@ -1,0 +1,30 @@
+.team-section {
+    background-color: $color-secondary;
+    .team-grid {
+        background: rgba(255, 255, 255, 0.55);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 10px 0;
+        @include tablet { 
+            grid-template-columns: repeat(2, 1fr); 
+            img:nth-child(n+5) {
+                display: none;
+            }
+        }
+        @include mobile { 
+            grid-template-columns: 1fr; 
+            img:nth-child(n+2) {
+                display: none;
+            }
+        }
+        
+        img {
+            max-width: 234px;
+            margin: 0 auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: $radius-main;
+        }
+    }
+}

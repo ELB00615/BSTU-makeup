@@ -1,0 +1,43 @@
+.pricing-section {
+    .pricing-grid {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 2rem;
+        padding: 4rem 0;
+        @include tablet { flex-direction: column; }
+    }
+    .price-tier {
+        width: 248px;
+        background-color: transparent;
+        border-radius: 12px;
+        padding: 1.5rem 1rem;
+        text-align: center;
+        border: 3px solid #fff;
+        transition: all 0.3s ease;
+        margin: 0 auto;
+        
+        h3 { color: #fff; font-size: 2.5rem; font-weight: 400; }
+        .price-tag {
+            margin-bottom: 3rem;
+            .price {
+                font-family: $font-logo;
+                font-size: 3.5rem;
+                color: #fff;
+            }
+        }
+        .tier-button {
+            display: block; width: 100%;
+            border-radius: 50px;
+            border: 3px solid #FFF;
+            background: #F6A3BB;
+            color: #fff;
+            padding: 2px;
+            text-decoration: none;
+            border-radius: $radius-button;
+            font-weight: 400;
+            font-size: 1.5rem;
+            &:hover { background-color: lighten($color-primary-dark, 5%); }
+        }
+    }
+}

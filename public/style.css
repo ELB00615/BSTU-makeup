@@ -60,6 +60,12 @@ section {
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+@media (max-width: 767px) {
+  .cta-button {
+    width: 80%;
+    padding: 0;
+  }
+}
 .cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(231, 84, 128, 0.3);
@@ -140,11 +146,6 @@ section {
   height: 22px;
   cursor: pointer;
 }
-@media (max-width: 767px) {
-  .main-nav .burger-icon {
-    display: block;
-  }
-}
 .main-nav .burger-icon span {
   display: block;
   position: absolute;
@@ -164,18 +165,6 @@ section {
 .main-nav .burger-icon span:nth-child(3) {
   top: 18px;
 }
-.main-nav .burger-toggle:checked ~ ul {
-  transform: translateX(0);
-}
-.main-nav .burger-toggle:checked + .burger-icon span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 6px);
-}
-.main-nav .burger-toggle:checked + .burger-icon span:nth-child(2) {
-  opacity: 0;
-}
-.main-nav .burger-toggle:checked + .burger-icon span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -7px);
-}
 
 .hero-section {
   display: flex;
@@ -189,6 +178,7 @@ section {
   background: url("assets/png/1.png") no-repeat center center/cover;
   padding: 3rem;
   max-width: 1024px;
+  width: 100%;
 }
 .hero-section h1 {
   font-family: "Pacifico", cursive;
@@ -250,6 +240,34 @@ section {
 
 .team-section {
   background-color: #E6BBC8;
+}
+.team-section .filter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+.team-section .filter-buttons .filter-button {
+  padding: 12px 24px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: "Jua", sans-serif;
+  font-size: 1rem;
+}
+.team-section .filter-buttons .filter-button:hover {
+  background-color: #f0f0f0;
+  border-color: #ddd;
+}
+.team-section .filter-buttons .filter-button.active {
+  background-color: #E75480;
+  color: #ffffff;
+  border-color: #E6BBC8;
 }
 .team-section .team-grid {
   background: rgba(255, 255, 255, 0.55);

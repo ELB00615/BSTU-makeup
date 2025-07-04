@@ -1,5 +1,33 @@
 .team-section {
     background-color: $color-secondary;
+        .filter-buttons {
+        @include flex-center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+
+        .filter-button {
+            padding: 12px 24px;
+            border-radius: 20px;
+            border: 1px solid #fff;
+            background-color: $color-white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: $font-body;
+            font-size: 1rem;
+
+            &:hover {
+                background-color: #f0f0f0;
+                border-color: #ddd;
+            }
+
+            &.active {
+                background-color: $color-primary-dark;
+                color: $color-white;
+                border-color: $color-header-bg;
+            }
+        }
+    }
     .team-grid {
         background: rgba(255, 255, 255, 0.55);
         display: grid;

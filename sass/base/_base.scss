@@ -47,6 +47,10 @@ section {
     border: none;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
+    @include mobile{
+        width: 80%;
+        padding: 0;
+    }
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 8px 15px rgba($color-primary-dark, 0.3);

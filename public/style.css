@@ -380,15 +380,6 @@ section {
   position: relative;
   background: url("assets/png/13.png") no-repeat center center/cover;
 }
-.contact-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
-}
 .contact-section .container {
   z-index: 2;
   display: flex;

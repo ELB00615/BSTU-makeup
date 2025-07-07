@@ -1,13 +1,6 @@
 .contact-section {
     position: relative;
     background: url('assets/png/13.png') no-repeat center center/cover;
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background-color: rgba($color-white, 0.2);
-    }
     .container {
         z-index: 2;
         @include flex-center;

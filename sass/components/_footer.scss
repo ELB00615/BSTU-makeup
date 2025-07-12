@@ -1,0 +1,38 @@
+.site-footer {
+    background-color: $color-secondary;
+    padding: 1px 0;
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    .footer-column {
+        text-align: center;
+        @include mobile { text-align: center; width: 100%; }
+    }
+    
+    
+    p, a {
+        font-size: 1.5rem;
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+    }
+    a:hover { color: $color-primary-dark; }
+    
+    .social-links {
+        display: flex;
+        gap: 1rem;
+        @include mobile { justify-content: center; }
+        
+        a {
+            color: #000;
+            svg { width: 62px; height: 62px; }
+            &:hover { color: darken($color-primary-dark, 10%); }
+        }
+    }
+}

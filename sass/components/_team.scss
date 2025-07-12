@@ -1,0 +1,128 @@
+.team-section {
+
+    .filter-buttons {
+        @include flex-center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+
+        .team-filter-button {
+            padding: 12px 24px;
+            border-radius: $radius-button;
+            border: 1px solid $color-secondary;
+            background-color: $color-white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: $font-body;
+            font-size: 1rem;
+
+            &:hover {
+                background-color: #f0f0f0;
+                border-color: #ddd;
+            }
+
+            &.active {
+                background-color: $color-primary-dark;
+                color: $color-white;
+            }
+        }
+    }
+
+    .team-wrapper {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slider-track {
+        position: relative;
+        display: flex;
+        width: 300%;
+        left: -100%;
+
+        &.slide-left {
+            animation: slide-left 0.8s ease-in-out forwards;
+        }
+        &.slide-right {
+            animation: slide-right 0.8s ease-in-out forwards;
+        }
+    }
+
+    .slider-page {
+        width: 33.3333%;
+        padding: 0 1rem;
+        display: grid;
+        gap: 1.5rem;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        @include mobile {
+
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            user-select: none;
+        }
+    }
+
+    .slider-arrows {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .team-wrapper:hover .slider-arrows {
+        opacity: 1;
+    }
+    
+    .slider-arrow {
+        pointer-events: all;
+        background-color: rgba($color-white, 0.8);
+        border-radius: 50%;
+        border: none;
+        width: 44px;
+        height: 44px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $color-text-dark;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        margin: 0 1rem;
+
+        &:hover {
+            background-color: $color-white;
+            transform: scale(1.1);
+        }
+    }
+}
+
+@keyframes slide-left {
+    from { left: -100%; }
+    to { left: -200%; }
+}
+
+@keyframes slide-right {
+    from { left: -100%; }
+    to { left: 0%; }
+}

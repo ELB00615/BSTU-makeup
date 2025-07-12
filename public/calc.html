@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeUp Lab | Calculator</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="index.html#hero" class="logo"><img src="assets/png/14.png" /></a>
+
+            <input type="checkbox" id="burger-toggle" class="burger-toggle">
+            <label for="burger-toggle" class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul>
+                <li><a href="index.html#video">Video</a></li>
+                <li><a href="index.html#pricing">Price</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contacts</a></li>
+                <li><a href="calc.html">Calculator</a></li>
+                <li><a href="index.html#team">Our Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculator-section">
+            <div class="container">
+                <div class="calculator-heading">
+                    <h1>Калькулятор услуг Make Up</h1>
+                    <p class="subtitle">Подберите идеальный образ и узнайте его стоимость</p>
+                </div>
+
+                <div class="calculator-wrapper">
+                    <form class="calc-controls">
+                        <fieldset>
+                            <legend>1. Выберите направление</legend>
+                            <div class="select-group">
+                                <select id="serviceCategory" name="serviceCategory">
+                                    <option value="makeup">Макияж</option>
+                                    <option value="brows">Брови и ресницы</option>
+                                    <option value="training">Обучение</option>
+                                </select>
+                            </div>
+                        </fieldset>
+
+                        <fieldset id="makeup-options" class="service-options">
+                            <legend>2. Выберите вид макияжа</legend>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="service" value="daytime"> <b>Дневной / Nude</b></label>
+                                <label><input type="checkbox" name="service" value="evening"> <b>Вечерний / Коктейльный</b></label>
+                                <label><input type="checkbox" name="service" value="bridal"> <b>Свадебный макияж</b></label>
+                                <label><input type="checkbox" name="service" value="lifting"> <b>Лифтинг-макияж</b></label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset id="brows-options" class="service-options hidden">
+                            <legend>2. Выберите услуги для бровей и ресниц</legend>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="service" value="brow-correction"> <b>Коррекция и окрашивание бровей</b></label>
+                                <label><input type="checkbox" name="service" value="brow-lamination"> <b>Долговременная укладка бровей</b></label>
+                                <label><input type="checkbox" name="service" value="lash-lamination"> <b>Ламинирование ресниц</b></label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset id="training-options" class="service-options hidden">
+                            <legend>2. Выберите формат обучения</legend>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="service" value="course-self"> <b>Курс "Макияж для себя"</b></label>
+                                <label><input type="checkbox" name="service" value="private-lesson"> <b>Индивидуальное занятие с визажистом</b></label>
+                                <label><input type="checkbox" name="service" value="pro-course"> <b>Профессиональный базовый курс</b></label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>3. Дополнительные опции</legend>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="extras" value="trial"> <b>Репетиция свадебного образа</b></label>
+                                <label><input type="checkbox" name="extras" value="on-site"> <b>Выезд на дом / локацию</b></label>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                    <div class="calc-summary">
+                        <h3 class="summary-title">Ваш визит</h3>
+                        <div class="summary-details">
+                            </div>
+                        <div class="summary-total">
+                            <span class="total-label">Итого:</span>
+                            <span class="total-price" id="totalPrice">0</span>
+                            <span class="total-currency">BYN</span>
+                        </div>
+                        <a href="#contact" class="cta-button">Записаться онлайн</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="footer" class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <p><a href="tel:+1234567890">+375 (33) 3729159</a></p>
+                
+                <p>Lukashevich Elizaveta <br/> Vyacheslavovna</p>
+                <p>Tokyo city, street Aliskinsa 228</p>
+            </div>
+            <div class="footer-column">
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer" title="Figma">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"></path><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"></path><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"></path><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"></path><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"></path></svg>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" title="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="calc.js" defer></script>
+</body>
+</html>

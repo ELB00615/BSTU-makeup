@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeUp Lab | Professional Makeup Artist</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="#hero" class="logo"><img src="assets/png/14.png" /></a>
+
+            <input type="checkbox" id="burger-toggle" class="burger-toggle">
+            <label for="burger-toggle" class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#pricing">Price</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <li><a href="calc.html">Calculator</a></li>
+                <li><a href="#team">Our Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>MakeUp Lab</h1>
+                <p>MakeUp Lab brings together the highest quality cosmetics, professional with passionate make-up artists to create perfect make-up for professional and everyday use</p>
+                <a href="#contact" class="cta-button">ORDER</a>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="assets/png/2.png" alt="Daily Makeup">
+                        <h3>Daily <br/> makeup</h3>
+                    </div>
+                    <div class="service-card">
+                        <img src="assets/png/3.png" alt="Wedding Makeup">
+                        <h3>Wedding <br/> makeup</h3>
+                    </div>
+                    <div class="service-card">
+                        <img src="assets/png/4.png" alt="Creative Makeup">
+                        <h3>Creative <br/> makeup</h3>
+                    </div>
+                    <div class="service-card">
+                        <img src="assets/png/5.png" alt="Glam Makeup">
+                        <h3>Glam <br/>makeup</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="team" class="team-section">
+        <div class="container">
+            <h2>Our Team</h2>            
+            <div class="filter-buttons">
+                <button class="team-filter-button active" data-category="lead">Lead Artists</button>
+                <button class="team-filter-button" data-category="bridal">Bridal Specialists</button>
+                <button class="team-filter-button" data-category="creative">Creative Artists</button>
+            </div>
+
+            <div class="team-wrapper">
+                <div class="slider-track">
+                    <div class="slider-page prev"></div>
+                    <div class="slider-page center"></div>
+                    <div class="slider-page next"></div>
+                </div>
+                <div class="slider-arrows">
+                    <button class="slider-arrow prev" aria-label="Предыдущий слайд">&lt;</button>
+                    <button class="slider-arrow next" aria-label="Следующий слайд">&gt;</button>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="video" class="video-section">
+            <div class="container">
+                <h2>Video</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/XdvP6DQUebQ" title="YouTube video player" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <h2>Price</h2>
+                <div class="pricing-grid">
+                    <div class="price-tier">
+                        <h3>Daily <br/>makeup</h3>
+                        <div class="price-tag">
+                            <span class="price">50$</span>
+                        </div>
+                        <a href="#contact" class="tier-button">ORDER</a>
+                    </div>
+                    <div class="price-tier recommended">
+                        <h3>Wedding <br/>makeup</h3>
+                        <div class="price-tag">
+                            <span class="price">150$</span>
+                        </div>
+                        <a href="#contact" class="tier-button">ORDER</a>
+                    </div>
+                    <div class="price-tier">
+                        <h3>Creative <br/>makeup</h3>
+                        <div class="price-tag">
+                            <span class="price">90$</span>
+                        </div>
+                        <a href="#contact" class="tier-button">ORDER</a>
+                    </div>
+                    <div class="price-tier">
+                        <h3>Glam <br/>makeup</h3>
+                        <div class="price-tag">
+                            <span class="price">75$</span>
+                        </div>
+                        <a href="#contact" class="tier-button">ORDER</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-form-wrapper">
+                    <h2>Contact Us</h2>
+                    <form class="contact-form">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="cta-button">Send message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="footer" class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <p><a href="tel:+1234567890">+375 (33) 3729159</a></p>
+                
+                <p>Lukashevich Elizaveta <br/> Vyacheslavovna</p>
+                <p>Tokyo city, street Aliskinsa 228</p>
+            </div>
+            <div class="footer-column">
+                <div class="social-links">
+                    <a href="https://www.figma.com/design/1W2yhEVkPClg88DEXDpLoo/makeup" target="_blank" rel="noopener noreferrer" title="Figma">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"></path><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"></path><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"></path><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"></path><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"></path></svg>
+                    </a>
+                    <a href="https://elb00615-bstu-makeup.web.app/calc.html" target="_blank" rel="noopener noreferrer" title="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

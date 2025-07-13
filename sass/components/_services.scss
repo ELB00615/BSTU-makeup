@@ -1,0 +1,28 @@
+.services-section {
+    background-color: $color-secondary;
+    .services-grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 15px 10px;
+        @include mobile { flex-direction: column; }
+    }
+    .service-card {
+        text-align: center;
+        img {
+            width: 191px;
+            height: 235px;
+            aspect-ratio: 191/313;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            background-color: #E59D9D;
+        }
+        h3 {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #E59D9D;
+            @include tablet { font-size: 1.5rem; }
+        }
+    }
+}

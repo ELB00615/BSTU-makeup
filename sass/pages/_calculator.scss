@@ -1,0 +1,175 @@
+
+$color-border: #EAE2E0;
+
+.calculator-section {
+    padding: $header-offset 10px;
+    background-color: $color-secondary;
+
+    .calculator-heading {
+        text-align: center;
+        margin-bottom: 4rem;
+        h1 {
+            font-family: $font-hero-text;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: $color-text-dark;
+        }
+        .subtitle {
+            margin: 1rem auto 0;
+            color: $color-text-light;
+        }
+    }
+
+    .calculator-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .calc-controls {
+        fieldset {
+            border: none;
+            padding: 0;
+            margin-bottom: 2.5rem;
+        }
+
+        legend {
+            font-family: $font-hero-text;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding: 0;
+            color: $color-text-dark;
+        }
+        
+        // Стили для выпадающего списка
+        .select-group {
+            select {
+                width: 100%;
+                padding: 12px 15px;
+                font-size: 1.1rem;
+                font-family: $font-body;
+                border: 1px solid $color-border;
+                border-radius: $radius-button;
+                background-color: $color-white;
+                color: $color-text-dark;
+                cursor: pointer;
+                transition: border-color 0.3s;
+                
+                &:focus {
+                    outline: none;
+                    border-color: $color-primary-dark;
+                }
+            }
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 12px;
+            width: 1.3em;
+            height: 1.3em;
+            accent-color: $color-primary-dark;
+        }
+        
+        .service-options.hidden {
+            display: none;
+        }
+    }
+
+    .calc-summary {
+        background-color: $color-white;
+        border-radius: $radius-main;
+        padding: 2.5rem;
+        box-shadow: 0 15px 40px rgba(210, 180, 190, 0.2);
+        position: sticky;
+        top: $header-offset + 20px;
+
+        .summary-title {
+            font-family: $font-hero-text;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: $color-text-dark;
+        }
+
+        .summary-details {
+            margin-bottom: 2rem;
+            min-height: 120px;
+            p {
+                font-size: 1rem;
+                margin-bottom: 0.75rem;
+                color: $color-text-dark;
+                display: flex;
+                justify-content: space-between;
+                span {
+                    text-align: right;
+                    color: $color-text-light;
+                    padding-left: 10px;
+                }
+                &.discount {
+                    color: $color-primary-dark;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .summary-total {
+            text-align: center;
+            border-top: 1px solid $color-border;
+            padding-top: 1.5rem;
+            
+            .total-label {
+                display: block;
+                font-size: 1.1rem;
+                color: $color-text-light;
+            }
+            .total-price {
+                font-family: $font-body;
+                font-size: 3.5rem;
+                font-weight: 700;
+                color: $color-text-dark;
+                line-height: 1.1;
+            }
+            .total-currency {
+                font-size: 1.5rem;
+                margin-left: 8px;
+                color: $color-text-dark;
+            }
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding: 14px 32px;
+            border: none;
+            border-radius: $radius-button;
+            background: $color-primary-dark;
+            color: $color-white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 10px 20px rgba($color-primary-dark, 0.25);
+            }
+        }
+    }
+}
